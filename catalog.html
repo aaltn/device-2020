@@ -41,6 +41,61 @@
       <li class="breadcrumbs__item  breadcrumbs__item--current"><a >Моноподы для селфи</a></li>
     </ul>
 
+    <section class="filter">
+      <h2 class="filter__title">Фильтр:</h2>
+      <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Стоимость</legend>
+          <div class="filter__input  price-range"></div>
+          <sapn class="price-range__min">от<input type="text" name="price-min" value="0"></span>
+          <sapn class="price-range__max">до<input type="text" name="price-max" value="5000"></sapn>
+        </fieldset>
+        <fieldset>
+          <legend>Цвет</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="calor-black" id="calor-black"
+              checked>
+              <label for="calor-black">Черный</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="calor-white" id="calor-white">
+              <label for="calor-white">Белый</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="calor-blue" id="calor-blue"
+              checked>
+              <label for="calor-blue">Синий</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="calor-red" id="calor-red"
+                checked>
+              <label for="calor-red">Красный</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="calor-pink" id="calor-pink">
+              <label for="calor-pink">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Bluetooth</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="bluetooth-yes" id="bluetooth-yes"
+              checked>
+              <label for="bluetooth-yes">Есть</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="bluetooth-no" id="bluetooth-no">
+              <label for="bluetooth-no">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="filter-button button">Показать</button>
+      </form>
+    </section>
+
   </main>
 
   <footer class="main-footer">
