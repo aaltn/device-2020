@@ -4,21 +4,84 @@
 800 - Extra Bold       */
 
 @font-face {
-  font-family: myFirstFont;
-  src: url(..\fonts\web\gilroyextrabold.woff2);
+  font-family: 'Gilroy Extra Bold';
+  src: url('../fonts/web/gilroyextrabold.woff2') format("woff2");
   font-weight: 800;
 }
 @font-face {
-  font-family: myFirstFont;
-  src: url(..\fonts\web\gilroylight.woff2);
+  font-family: 'Gilroy Light';
+  src: url('../fonts/web/gilroylight.woff2') format("woff2");
   font-weight: 300;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+
+
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
   color: #464646;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigation {
+  color: #000000;
+
+  background-color: #f7e296;
+}
+
+.navigation-site {
+  font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.navigation-catalog {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: normal;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.navigation-site,
+.navigation-catalog,
+.navigation-user {
+  list-style: none;
+}
+
+.navigation a {
+  color: #000000;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  opacity: 0.6;
+}
+
+.navigation a:active,
+.search,
+.logout-link.active {
+  opacity: 0.3;
+}
+
+
+
+.inactive {
+  /* display: none; */
 }
 
