@@ -20,13 +20,23 @@
       <ul class="navigation-user">
         <li class="login-link  inactive"><a href="#">Войти</a></li>
         <li><a class="ligin-user" href="#">Валентин Петухов</a></li>
-        <li><a class="login-link  active" href="#">Выйти</a></li>
+        <li><a class="logout-link  active" href="#">Выйти</a></li>
         <li><a class="navigation-user__compare" href="compare.html">Сравнить</a></li>
         <li><a class="navigation-user__cart" href="cart.html">Корзина</a></li>
       </ul>
 
       <ul class="navigation-site">
-        <li><a href="catalog.html">Каталог товаров</a></li>
+        <li>
+          <a href="catalog.html">Каталог товаров</a>
+          <ul class="navigation-catalog">
+            <li><a href="catalog.html?sort=virtual+reality">Виртуальная реальность</a></li>
+            <li><a href="catalog.html?sort=monopods">Моноподы для селфи</a></li>
+            <li><a href="catalog.html?sort=action+cameras">Экшен-камеры</a></li>
+            <li><a href="catalog.html?sort=fitness+bracelets">Фитнес-браслеты</a></li>
+            <li><a href="catalog.html?sort=smart+watch">Умные часы</a></li>
+            <li><a href="catalog.html?sort=quadcopters">Квадракоптеры</a></li>
+          </ul>
+        </li>
         <li><a href="#delivery">Доставка</a></li> <!-- href="index.html#delivery" -->
         <li><a href="#warranty">Гарантия</a></li> <!-- href="index.html#warranty" -->
         <li><a href="#contacts">Контакты</a></li> <!-- href="index.html#contacts" -->
@@ -128,7 +138,7 @@
       <h2 class="visually-hidden">Каталог товаров</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <a href="catalog.html?sort=virt_real">
+          <a href="catalog.html?sort=virtual+reality">
             <div class="catalog__img">
               <img src="img/svg/popular-1.svg" alt="Виртуальная реальность">
               <b>Виртуальная реальность</b>
@@ -136,7 +146,7 @@
           </a>
         </li>
         <li class="catalog__item">
-          <a href="catalog.html?sort=virt_real">
+          <a href="catalog.html?sort=monopods">
             <div class="catalog__img">
               <img src="img/svg/popular-2.svg" alt="Моноподы для селфи">
               <b>Моноподы для селфи</b>
@@ -144,7 +154,7 @@
           </a>
         </li>
         <li class="catalog__item">
-          <a href="catalog.html?sort=virt_real">
+          <a href="catalog.html?sort=action+cameras">
             <div class="catalog__img">
               <img src="img/svg/popular-3.svg" alt="Экшен-камеры">
               <b>Экшен-камеры</b>
@@ -152,7 +162,7 @@
           </a>
         </li>
         <li class="catalog__item">
-          <a href="catalog.html?sort=virt_real">
+          <a href="catalog.html?sort=fitness+bracelets">
             <div class="catalog__img">
               <img src="img/svg/popular-4.svg" alt="Фитнес-браслеты">
               <b>Фитнес-браслеты</b>
@@ -160,7 +170,7 @@
           </a>
         </li>
         <li class="catalog__item">
-          <a href="catalog.html?sort=virt_real">
+          <a href="catalog.html?sort=smart+watch">
             <div class="catalog__img">
               <img src="img/svg/popular-5.svg" alt="Умные часы">
               <b>Умные часы</b>
@@ -168,7 +178,7 @@
           </a>
         </li>
         <li class="catalog__item">
-          <a href="catalog.html?sort=virt_real">
+          <a href="catalog.html?sort=quadcopters">
             <div class="catalog__img">
               <img src="img/svg/popular-6.svg" alt="Квадракоптеры">
               <b>Квадракоптеры</b>
