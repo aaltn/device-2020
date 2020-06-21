@@ -1,0 +1,24 @@
+/* font-weight:
+300 - Light
+400 - Regular (Normal)
+800 - Extra Bold       */
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(..\fonts\web\gilroyextrabold.woff2);
+  font-weight: 800;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(..\fonts\web\gilroylight.woff2);
+  font-weight: 300;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
+}
+
