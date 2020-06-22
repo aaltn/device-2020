@@ -30,6 +30,14 @@ body {
   color: #464646;
 }
 
+h2,
+h3 {
+  font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
+  font-size: 47px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
 a {
   text-decoration: none;
 }
@@ -40,7 +48,8 @@ a {
   background-color: #f7e296;
 }
 
-.navigation-site {
+.navigation-site,
+.accent-link  {
   font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
   font-size: 18px;
   line-height: 24px;
@@ -64,7 +73,8 @@ a {
   list-style: none;
 }
 
-.navigation a {
+.navigation a,
+.accent-link {
   color: #000000;
 }
 
@@ -75,13 +85,75 @@ a {
 
 .navigation a:active,
 .search,
-.logout-link.active {
+.logout-link.active,
+.accent-link:active {
   opacity: 0.3;
 }
-
-
 
 .inactive {
   /* display: none; */
 }
 
+.accent-link {
+
+}
+
+.slider {}
+
+.slider td {
+  font-family: 'Gilroy Light', Arial, sans-serif;;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+
+  width: 160px;
+}
+
+.slider th {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.slider__list {
+  list-style: none;
+}
+
+
+.catalog {}
+
+.catalog__list {
+  list-style: none;
+}
+
+.catalog__item img {
+  background-color: #f7e296;
+}
+
+.catalog__item a {
+  color: #000000;
+}
+
+.catalog__item a:hover img,
+.catalog__item a:focus img{
+  background-color: #ffc600;
+}
+
+.catalog__item a:active .catalog__img {
+  opacity: 0.3;
+}
+
+.catalog__item b {
+  font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.services {}
+
+.services__links-list,
+.services__list {
+  list-style: none;
+}
