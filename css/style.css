@@ -94,7 +94,9 @@ a {
   opacity: 0.6;
 }
 
-.navigation a:active,
+.inner-page .logo:active,
+.navigation-user a:active,
+.navigation-site a:active
 .search,
 .logout-link.active {
   opacity: 0.3;
@@ -139,8 +141,10 @@ a {
   font-weight: 800;
 }
 
-.slider td {
+.slider__description td,
+.catalog__description td {
   width: 160px;
+  text-align: left;
 
   font-family: 'Gilroy Light', Arial, sans-serif;;
   font-size: 36px;
@@ -148,7 +152,10 @@ a {
   font-weight: 300;
 }
 
-.slider th {
+.slider__description th,
+.catalog__description th {
+  text-align: left;
+
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 20px;
@@ -326,16 +333,16 @@ a {
   list-style: none;
 }
 
-.social-button {
+.social-button a {
   opacity: 0.3;
 }
 
-.social-button:hover,
-.social-button:focus {
+.social-button a:hover,
+.social-button a:focus {
   opacity: 0.6;
 }
 
-.social-button:active {
+.social-button a:active {
   opacity: 0.1;
 }
 
