@@ -30,6 +30,24 @@ body {
   color: #464646;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 a {
   text-decoration: none;
 }
@@ -49,10 +67,80 @@ a {
 .button:focus,
 .button:active {}
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header {}
+
+.logo {
+  display: inline-block;
+  width: 164px;
+  height: 36px;
+  margin-bottom: 35px;
+}
+
 .navigation {
+  /* margin-bottom: 55px; */
+  padding-top: 22px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 50px;
+
   color: #000000;
 
-  background-color: #f7e296;
+  /* background-color: #f7e296; */
+  background: linear-gradient(#f7e296, #f7e296);
+  background-repeat: no-repeat;
+  background-position-y: 40px;
+}
+
+.navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.search {
+  width: 500px;
+  /* margin-right: 40px; */
+}
+
+.navigation-user,
+.navigation-site,
+.navigation-catalog {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.navigation-user a {
+  display: inline-block;
+  width: 100px;
+  /* margin-right: 20px; */
+}
+
+.navigation-user .login-user {
+  width: 150px;
+
+  /* на случай если не сработает JS ф-ия truncate(str, 19)*/
+  height: 30px;
+  overflow: hidden;
+}
+
+.navigation-user__compare,
+.navigation-user__cart {
+  /* margin-right: 0; */
+  text-align: right;
 }
 
 .navigation-site,
@@ -65,19 +153,20 @@ a {
   text-transform: uppercase;
 }
 
+.navigation-site {
+  display: flex;
+  justify-content: space-between;
+}
+
 .navigation-catalog {
+  display: none;
+
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 36px;
   letter-spacing: normal;
   font-weight: 300;
   text-transform: none;
-}
-
-.navigation-site,
-.navigation-catalog,
-.navigation-user {
-  list-style: none;
 }
 
 .navigation a,
@@ -98,12 +187,12 @@ a {
 .navigation-user a:active,
 .navigation-site a:active
 .search,
-.logout-link.active {
+.active {
   opacity: 0.3;
 }
 
 .inactive {
-  /* display: none; */
+  display: none;
 }
 
 .accent-link {
@@ -122,23 +211,75 @@ a {
 .accent-link:hover,
 .accent-link:focus {
   background-size: auto auto;
+  /* transition: all 0.1s linear; */
 }
 
 .accent-link:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.slider {}
+
+.slider {
+  position: relative;
+
+  margin-bottom: 85px;
+}
 
 .slider h2,
 .slider h3,
 .about h2,
 .contacts h2,
 .services h3 {
+  margin-top: 0;
+  padding-top: 75px;
+
   font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
   font-size: 47px;
   line-height: 56px;
   font-weight: 800;
+  color: #000000;
+}
+
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background: linear-gradient(#f7e296 110px, #ffffff 110px);
+  background-repeat: no-repeat;
+
+  /* background-position-y: 110px; */
+
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__item--active {
+  display: block;
+}
+
+.slider__img {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 60px;
+
+  /*   т.к. картинки разного размера
+      нужно разместить в центре контейнера
+   */
+  width: 580px;
+  height: 500px;
+  /* text-align: center; */
+}
+
+.slider__description {
+  padding-right: 80px;
 }
 
 .slider__description td,
@@ -162,18 +303,27 @@ a {
   font-weight: 300;
 }
 
-.slider__list {
+.slider__togler {
+  position: absolute;
+  bottom: 140px;
+  right: 80px;
+  display: flex;
+
   list-style: none;
 }
 
-.slider__togler {
-  list-style: none;
+.slider__togler li {
+  margin-right: 21px;
+}
+
+.slider__togler:last-child {
+  margin-right: 0px;
 }
 
 .slide-button {
   width: 12px;
   height: 12px;
-  margin: 21px;
+  /* margin-right: 21px; */
   padding: 0;
 
   font-size: 0;
@@ -201,12 +351,22 @@ a {
 }
 
 
-.catalog {}
+.catalog {
+  margin-bottom: 80px;
+}
 
 .catalog__list {
-  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
+}
+
+.catalog__item {
+  width: 160px;
+  /* margin-left: 20px; */
 }
 
 .catalog__img {
@@ -244,7 +404,7 @@ a {
 }
 
 .services {
-  padding-top: 80px;
+  /* padding-top: 80px; */
 
   /* background-color: #e5e5e5; */
   background: linear-gradient(#e5e5e5, #e5e5e5);
@@ -252,9 +412,50 @@ a {
   background-position-y: 100px;
 }
 
+.services .container {
+  display: flex;
+}
+
 .services__links-list,
 .services__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.services__links-list {
+  margin-right: 120px;
+  padding-top: 80px;
+  padding-bottom: 70px;
+
+  border-right: 7px solid black;
+}
+
+/* .services__link .accent-link { */
+/* .services__link {
+  padding-right: 120px;
+} */
+
+.services__link--active .accent-link,
+.services__link .accent-link:active {
+  padding-right: 120px;
+
+  color: #f7e184;
+  background: #000000;
+  cursor: default;
+}
+
+.services__list {
+  padding-right: 320px;
+}
+
+.services__item {
+  display: none;
+}
+
+.services__item--active {
+  display: block;
 }
 
 .services .accent-link {
@@ -264,7 +465,17 @@ a {
 .brends {}
 
 .brends__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.brends__item {
+  width: 260px;
+  height: 100px;
 }
 
 .brends__link img:last-child {
@@ -279,10 +490,31 @@ a {
   display: none;
 }
 
-.about {}
+.index-coumns {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 190px;
+}
+
+.about {
+  /* width: 560px; */
+  width: 475px;
+  padding-right: 85px;
+}
 
 .delivers-list {
-  list-style: none;
+  margin: 0;
+  padding-left: 20px;
+
+
+  list-style: circle;
+  text-align:left
+}
+
+.delivers-item {
+  padding-left: 15px;
 }
 
 .delivers-item a {
@@ -303,10 +535,14 @@ a {
   opacity: 0.3;
 }
 
-.contacts {}
+.contacts {
+  width: 560px;
+}
 
 .about .accent-link,
 .contacts .accent-link {
+  position: absolute;
+  bottom: 80px;
   width: 260px;
 }
 
@@ -315,6 +551,12 @@ a {
 
   background-color: #464646;
 }
+
+.main-footer .container {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
 
 .main-footer a {
   color: #ffffff;
@@ -329,8 +571,52 @@ a {
   opacity: 1;
 }
 
+
+.footer-user,
+.footer-condition,
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-social::before {
+  content: "";
+
+  display: block;
+  width: 80px;
+  height: 7px;
+  margin-right: 200px;
+
+  background-color: #ffc600;
+}
+
+
 .social-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+
+  /* text-align: center; */
+}
+
+.social-links li {
+  margin-right: 23px;
+}
+
+.social-links li:last-child {
+  margin-right: 0px;
+}
+
+.navigation-site--footer li {
+  margin-right: 38px;
+}
+
+.navigation-site--footer:last-child {
+  margin-right: 0px;
 }
 
 .social-button a {
@@ -344,6 +630,11 @@ a {
 
 .social-button a:active {
   opacity: 0.1;
+}
+
+.copyright {
+  width: 280px;
+  text-align: right;
 }
 
 .copyright a {
