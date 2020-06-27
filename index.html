@@ -328,6 +328,59 @@
 
   </footer>
 
+  <section class="modal  modal-login">
+    <h2>Вход в личный кабинет</h2>
+    <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+      </p>
+      <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+      </p>
+      <p class="login-help">
+          <label class="login-checkbox">
+              <input type="checkbox" name="remember" class="visually-hidden">
+              <span class="checkbox-indicator"></span>
+              Запомните меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+      </p>
+      <button class="button  accent-link" type="submit">Войти</button>
+    </form>
+    <button class="button  button--modal-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="modal  modal-write-us">
+    <h2 class="visually-hidden">Форма для обратной связи</h2>
+    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+          <label class="modal-label" for="user-name">Ваше имя:</label>
+          <input class="modal-input" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label class="modal-label" for="user-email">Ваше e-mail:</label>
+        <input class="modal-input" id="user-email" type="text" name="user-email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label class="modal-label" for="user-review">Текст письма:</label>
+        <textarea class="modal-textarea" id="user-review" name="user-review" rows="5" cols="50">В свободной форме</textarea>
+      </p>
+      <button class="button  accent-link" type="submit">Отправить</button>
+    </form>
+    <button class="button  button--modal-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="modal  modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <p>
+      <img src="img/map-big.jpg" width="960" height="560" alt="Офис компании по адресу: г. Ленинград, ул. Строителей 15">
+    </p>
+    <button class="button  button--modal-close" type="button">Закрыть</button>
+  </section>
+
   <script src="js/scripts.js"></script>
 </body>
 </html>
