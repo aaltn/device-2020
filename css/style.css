@@ -118,8 +118,8 @@ a {
 .search-input {
   box-sizing: border-box;
 
-  width: 356px;
-  /* width: 218px; */
+  /* width: 356px; */
+  width: 180px;
   margin-right: -4px;
   padding: 7px 15px;
   padding-left: 40px;
@@ -134,17 +134,23 @@ a {
   background-repeat: no-repeat;
   border: 2px solid transparent;
 
-  /* transition: width 0.2s ; */
+  transition: width 0.2s ease-in-out,
+              border-bottom 0.2s ease-in-out;
 }
 
 .button--search {
-  display: none;
-  padding: 7px 19px;
+  box-sizing: border-box;
+  /* display: none; */
+  width: 0;
+  padding: 7px 0px;
 
   background-color: transparent;
-  border: 2px solid #000000;
+  border: 0px solid #000000;
 
   cursor: pointer;
+  overflow: hidden;
+
+  transition: width 0.25s ease-in-out;
 }
 
 .search-input:hover {
@@ -155,15 +161,13 @@ a {
 
 .button--search:hover,
 .button--search:focus {
-  /* display: inline-block; */
-
   color: #ffffff;
   background-color: #000000;
 
   outline: none;
 }
 
-.search-input:focus {
+.search-form:focus-within .search-input {
   width: 356px;
 
   color: rgba(0, 0, 0, 1);
@@ -177,10 +181,23 @@ a {
 
 .search-form:focus-within .button--search {
   display: inline-block;
+  width: 85px;
+  padding: 7px 19px;
+
+  border: 2px solid #000000;
+  /* overflow: auto; */
 }
 
-.search-input:visited {
-  /* background-color: #f7e296; */
+@-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
 }
 
 .button--search:active {
@@ -989,6 +1006,8 @@ a {
 
   background-color: #f2f2f2;
   border: 3px transparent solid;
+
+  resize: none;
 }
 
 .button--modal-close:hover,
