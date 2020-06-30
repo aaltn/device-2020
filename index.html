@@ -17,7 +17,14 @@
       </a>
 
       <div class="navigation-wrapper">
-        <a class="search" href="search.html">Поиск по сайту</a>
+        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+          <p>
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
+            <input  class="search-input" id="search-input" type="search" name="search" placeholder="Поиск по сайту">
+            <button class="button  button--search" type="submit">Найти</button>
+          </p>
+        </form>
+
         <ul class="navigation-user">
           <li><a class="login-link" href="#">Войти</a></li>
           <li class="inactive"><a class="login-user" href="#">Валентин Петухов</a></li>
