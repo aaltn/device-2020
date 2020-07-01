@@ -120,6 +120,7 @@ a {
 
   /* width: 356px; */
   width: 180px;
+  height: 48px;              /* для совместимости с IE */
   margin-right: -4px;
   padding: 7px 15px;
   padding-left: 40px;
@@ -132,10 +133,12 @@ a {
   background-image: url("../img/svg/search.svg");
   background-position: 4px center;
   background-repeat: no-repeat;
-  border: 2px solid transparent;
+  border: none;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 
-  transition: width 0.2s ease-in-out,
-              border-bottom 0.2s ease-in-out;
+  transition: width 0.2s,
+              border-bottom 0.2s;
 }
 
 .button--search {
@@ -150,7 +153,7 @@ a {
   cursor: pointer;
   overflow: hidden;
 
-  transition: width 0.25s ease-in-out;
+  transition: width 0.25s;
 }
 
 .search-input:hover {
@@ -159,22 +162,21 @@ a {
   cursor: pointer;
 }
 
-.button--search:hover,
-.button--search:focus {
-  color: #ffffff;
-  background-color: #000000;
-
-  outline: none;
-}
-
 .search-form:focus-within .search-input {
   width: 356px;
 
   color: rgba(0, 0, 0, 1);
 
-  border: none;
   border-top: 2px solid transparent;
   border-bottom: 2px solid #000000;
+
+  outline: none;
+}
+
+.button--search:hover,
+.button--search:focus {
+  color: #ffffff;
+  background-color: #000000;
 
   outline: none;
 }
@@ -188,20 +190,28 @@ a {
   /* overflow: auto; */
 }
 
-@-webkit-keyframes autofill {
-  to {
-    color: inherit;
-    background: transparent;
-  }
-}
-
-input:-webkit-autofill {
-  -webkit-animation-name: autofill;
-  -webkit-animation-fill-mode: both;
-}
-
 .button--search:active {
   color: rgba(255, 255, 255, 0.3);
+}
+/* для совместимости с IE - т.к. у него нет :focus-within */
+.search-input:focus {
+  width: 356px;
+
+  color: rgba(0, 0, 0, 1);
+
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid #000000;
+
+  outline: none;
+}
+
+.search-input:focus + .button--search,
+.button--search:focus {
+  display: inline-block;
+  width: 85px;
+  padding: 7px 19px;
+
+  border: 2px solid #000000;
 }
 
 .navigation-user,
