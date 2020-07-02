@@ -79,7 +79,7 @@ a {
   display: inline-block;
   width: 164px;
   height: 36px;
-  margin-bottom: 35px;
+  margin-bottom: 16px;
 }
 
 .navigation {
@@ -100,7 +100,7 @@ a {
 .navigation-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .search-form {
@@ -264,8 +264,46 @@ a {
   justify-content: space-between;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-link {
+  position: relative;
+
+  padding-right: 32px;
+}
+
+.dropdown-link::before,
+.dropdown-link::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  right: 0px;
+
+  width: 16px;
+  height: 2px;
+
+  background-color: #b8a974;
+
+  transition: transform 0.2s;
+}
+
+.dropdown-link::after {
+  transform: rotate(-90deg);
+}
+
 .navigation-catalog {
+  position: absolute;
+  top: 24px;
+  left: -60px;
+
   display: none;
+  width: 1040px;
+  min-height: 120px;
+  margin: 0;
+  padding: 20px 60px;
 
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
@@ -273,6 +311,46 @@ a {
   letter-spacing: normal;
   font-weight: 300;
   text-transform: none;
+
+  background-color: #f7e296;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+
+  z-index: 2;
+}
+
+.navigation-catalog li {
+  margin-right: 60px;
+}
+
+.dropdown:hover .navigation-catalog,
+.dropdown-link:focus + .navigation-catalog {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dropdown:hover .dropdown-link::after,
+.dropdown-link:focus::after {
+  transform: rotate(0deg);
+}
+
+.dropdown:hover .dropdown-link::before,
+.dropdown-link:focus::before {
+  transform: rotate(180deg);
+}
+
+.photo-video-catalog,
+.wearable-gadgets-catalog,
+.quadrocopters-catalog {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
 }
 
 .navigation a,

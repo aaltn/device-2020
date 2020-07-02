@@ -35,15 +35,21 @@
       </div>
 
       <ul class="navigation-site">
-        <li>
-          <a href="catalog.html">Каталог товаров</a>
+        <li class="dropdown">
+          <a  class="dropdown-link"  href="catalog.html">Каталог товаров</a>
           <ul class="navigation-catalog">
-            <li><a href="catalog.html?sort=virtual+reality">Виртуальная реальность</a></li>
-            <li><a href="catalog.html?sort=monopods">Моноподы для селфи</a></li>
-            <li><a href="catalog.html?sort=action+cameras">Экшен-камеры</a></li>
-            <li><a href="catalog.html?sort=fitness+bracelets">Фитнес-браслеты</a></li>
-            <li><a href="catalog.html?sort=smart+watch">Умные часы</a></li>
-            <li><a href="catalog.html?sort=quadcopters">Квадракоптеры</a></li>
+            <ul class="photo-video-catalog">
+              <li><a href="catalog.html?sort=virtual+reality">Виртуальная реальность</a></li>
+              <li><a href="catalog.html?sort=monopods">Моноподы для селфи</a></li>
+              <li><a href="catalog.html?sort=action+cameras">Экшен-камеры</a></li>
+            </ul>
+            <ul class="wearable-gadgets-catalog">
+              <li><a href="catalog.html?sort=fitness+bracelets">Фитнес-браслеты</a></li>
+              <li><a href="catalog.html?sort=smart+watch">Умные часы</a></li>
+            </ul>
+            <Ul class="quadrocopters-catalog">
+              <li><a href="catalog.html?sort=quadcopters">Квадракоптеры</a></li>
+            </Ul>
           </ul>
         </li>
         <li><a href="#delivery"  onclick="tablinkClick('delivery-link')">Доставка</a></li> <!-- href="index.html#delivery" -->

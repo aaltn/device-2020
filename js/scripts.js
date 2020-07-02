@@ -190,3 +190,14 @@ window.onclick = function(event) {
 
   }
 }
+
+//dropdown menu -----------
+/* When the user focus on the ".dropdown-link",
+show the dropdown content */
+
+  // var dropdownLink = document.querySelector(".dropdown-link");
+
+  // dropdownLink.onfocus = function() {
+  //   console.log(dropdownLink);
+  //   document.querySelector(".navigation-catalog").classList.add("show");
+  // };
