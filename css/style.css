@@ -328,6 +328,12 @@ a {
   flex-wrap: wrap;
 }
 
+/* т.к. IE не поддерживает ":focus-within" нужно вынести отдельно */
+.dropdown:focus-within .navigation-catalog {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .show {
   display: flex;
   flex-wrap: wrap;
@@ -338,8 +344,18 @@ a {
   transform: rotate(0deg);
 }
 
+/* т.к. IE не поддерживает ":focus-within" нужно вынести отдельно */
+.dropdown:focus-within .dropdown-link::after {
+  transform: rotate(0deg);
+}
+
 .dropdown:hover .dropdown-link::before,
 .dropdown-link:focus::before {
+  transform: rotate(180deg);
+}
+
+/* т.к. IE не поддерживает ":focus-within" нужно вынести отдельно */
+.dropdown:focus-within .dropdown-link::before {
   transform: rotate(180deg);
 }
 
