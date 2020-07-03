@@ -397,7 +397,7 @@ a {
 .accent-link {
   display: inline-block;
   width: 220px;
-  padding: 14px 0;
+  padding: 8px 0;
 
   text-align: center;
   /* background: #f0c52e; */
@@ -628,18 +628,22 @@ a {
   border-right: 7px solid black;
 }
 
-/* .services__link .accent-link { */
-/* .services__link {
-  padding-right: 120px;
-} */
+.services__link {
+  margin-right: 120px;
+  margin-bottom: 25px;
+}
 
-.services__link--active .accent-link,
-.services__link .accent-link:active {
+.services__link--active {
+  margin-right: 0px;
   padding-right: 120px;
 
   color: #f7e184;
   background: #000000;
   cursor: default;
+}
+
+.services__link--active:active {
+  color: #f7e184;
 }
 
 .services__list {
