@@ -11,6 +11,27 @@ function truncate(str, maxlength) {
 // длина строки в поле .login-user не должна превышать 19 символов:
 // truncate(str, 19)
 
+window.addEventListener('load', function() {
+
+  document.getElementById("delivery-link").addEventListener("click", function (evt) {
+    evt.preventDefault();
+  });
+
+  var hashURL = window.location.hash.slice(1);
+
+  switch (hashURL) {
+    case "warranty":
+      tablinkClick("warranty-link");
+      break;
+    case "credit":
+      tablinkClick("credit-link");
+      break;
+    default:
+      tablinkClick("delivery-link");
+  }
+
+})
+
 //login form  ---------------------------------------------------------------------------
 var body = document.body;
 var link = document.querySelector(".login-link");
@@ -162,9 +183,6 @@ function openServices(evt, servicesName) {
 function tablinkClick(tablinksName) {
   document.getElementById(tablinksName).click();
 }
-
-tablinkClick("delivery-link");
-
 
 //   ---------------------------------------------------------------------------
 // When the user clicks anywhere outside of the modal, close it
