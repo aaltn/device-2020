@@ -441,14 +441,24 @@ a {
 .about h2,
 .contacts h2,
 .services h3 {
-  margin-top: 0;
-  padding-top: 75px;
+  margin: 0;
+  margin-bottom: 16px;
+  padding-top: 78px;
 
   font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
   font-size: 47px;
   line-height: 56px;
   font-weight: 800;
   color: #000000;
+}
+
+.slider p {
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.slider .accent-link {
+  margin-bottom: 56px;
 }
 
 
@@ -476,7 +486,7 @@ a {
   justify-content: center;
   align-items: center;
 
-  margin-right: 60px;
+  margin-right: 20px;
 
   /*   т.к. картинки разного размера
       нужно разместить в центре контейнера
@@ -486,7 +496,7 @@ a {
 }
 
 .slider__description {
-  padding-right: 80px;
+  padding-right: 60px;
 }
 
 .slider__description td,
@@ -531,12 +541,15 @@ a {
   width: 12px;
   height: 12px;
   /* margin-right: 21px; */
+
   padding: 0;
 
   font-size: 0;
 
   border: 2px solid #000000;
   border-radius: 6px;
+
+  cursor: pointer;
 }
 
 .slide-button:hover,
@@ -1207,3 +1220,20 @@ a {
 }
 
 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
