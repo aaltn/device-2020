@@ -455,6 +455,8 @@ a {
 .slider p {
   margin: 0;
   margin-bottom: 50px;
+
+  min-height: 70px;
 }
 
 .slider .accent-link {
@@ -477,11 +479,11 @@ a {
 }
 
 .slider__item--active {
-  display: block;
+  display: flex;
 }
 
 .slider__img {
-  float: left;
+  /* float: left; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,6 +498,7 @@ a {
 }
 
 .slider__description {
+  width: 500px;
   padding-right: 60px;
 }
 
@@ -522,7 +525,7 @@ a {
 
 .slider__togler {
   position: absolute;
-  bottom: 140px;
+  bottom: 130px;
   right: 80px;
   display: flex;
 
