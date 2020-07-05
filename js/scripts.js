@@ -210,7 +210,7 @@ window.onclick = function(event) {
 }
 
 //Create A Slideshow -----------
-var slideIndex = 1;
+var slideIndex = 3;
 showSlides(slideIndex);
 
 // Next/previous controls

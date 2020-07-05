@@ -475,31 +475,73 @@ a {
 }
 
 .slider__item {
-  display: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider__item--active {
-  display: flex;
+  /* display: flex; */
 }
 
 .slider__img {
-  /* float: left; */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-right: 20px;
-
-  /*   т.к. картинки разного размера
-      нужно разместить в центре контейнера
-   */
+  /* т.к. картинки разного размера
+  нужно разместить в центре контейнера */
   width: 580px;
   height: 500px;
 }
 
 .slider__description {
+  position: relative;
+
   width: 500px;
   padding-right: 60px;
+}
+
+.slider__description::before {
+  content: "";
+
+  position: absolute;
+  top: 37px;
+  left: 0;
+
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
+}
+
+.slider__description::after {
+  content: "0 ";
+
+  position: absolute;
+  top: -16px;
+  right: 60px;
+
+  font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
+  font-size: 180px;
+  line-height: 180px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.slider__item:nth-child(1) .slider__description::after {
+  content: "01";
+}
+
+.slider__item:nth-child(2) .slider__description::after {
+  content: "02";
+}
+
+.slider__item:nth-child(3) .slider__description::after {
+  content: "03";
+}
+
+.slider__description h3 {
+  z-index: 1;
+  position: relative;
 }
 
 .slider__description td,
