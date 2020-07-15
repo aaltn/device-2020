@@ -17,26 +17,39 @@
       </a>
 
       <div class="navigation-wrapper">
-        <a class="search" href="search.html">Поиск по сайту</a>
+        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+          <p>
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
+            <input  class="search-input" id="search-input" type="search" name="search" placeholder="Поиск по сайту">
+            <button class="button  button--search" type="submit">Найти</button>
+          </p>
+        </form>
+
         <ul class="navigation-user">
           <li class="inactive"><a class="login-link" href="#">Войти</a></li>
           <li><a class="login-user" href="#">Валентин Петухов</a></li>
           <li class="active"><a class="logout-link  " href="#">Выйти</a></li>
           <li><a class="navigation-user__compare" href="compare.html">Сравнить</a></li>
-          <li><a class="navigation-user__compare" href="cart.html">Корзина</a></li>
+          <li><a class="navigation-user__cart" href="cart.html">Корзина</a></li>
         </ul>
       </div>
 
       <ul class="navigation-site">
-        <li class="active">
-          <a >Каталог товаров</a>
+        <li class="dropdown  active">
+          <a  class="dropdown-link"  href="catalog.html">Каталог товаров</a>
           <ul class="navigation-catalog">
-            <li><a href="catalog.html?sort=virtual+reality">Виртуальная реальность</a></li>
-            <li><a href="catalog.html?sort=monopods">Моноподы для селфи</a></li>
-            <li><a href="catalog.html?sort=action+cameras">Экшн-камеры</a></li>
-            <li><a href="catalog.html?sort=fitness+bracelets">Фитнес-браслеты</a></li>
-            <li><a href="catalog.html?sort=smart+watch">Умные часы</a></li>
-            <li><a href="catalog.html?sort=quadcopters">Квадракоптеры</a></li>
+            <ul class="photo-video-catalog">
+              <li><a href="catalog.html?sort=virtual+reality">Виртуальная реальность</a></li>
+              <li><a href="catalog.html?sort=monopods">Моноподы для селфи</a></li>
+              <li><a href="catalog.html?sort=action+cameras">Экшн-камеры</a></li>
+            </ul>
+            <ul class="wearable-gadgets-catalog">
+              <li><a href="catalog.html?sort=fitness+bracelets">Фитнес-браслеты</a></li>
+              <li><a href="catalog.html?sort=smart+watch">Умные часы</a></li>
+            </ul>
+            <ul class="quadrocopters-catalog">
+              <li><a href="catalog.html?sort=quadcopters">Квадракоптеры</a></li>
+            </ul>
           </ul>
         </li>
         <li><a href="index.html#delivery">Доставка</a></li> <!-- href="index.html#delivery" -->
@@ -209,45 +222,49 @@
   </main>
 
   <footer class="main-footer">
-    <section class="footer-user">
-      <h2 class="visually-hidden">Для пользователя</h2>
-      <a class="logo  logo--footer" href="index.html">
-        <!-- на других страницах будет ссылкой на главную -->
-        <img src="img/footer_logo.png" width="163" height="36" alt="Логотип магазина «DEVICE»">
-      </a>
-      <ul class="navigation-user  navigation-user--footer">
-        <li class="login-link  inactive"><a href="#">Войти</a></li>
-        <li><a class="ligin-user" href="#">Валентин Петухов</a></li>
-        <li><a class="login-link  active" href="#">Выйти</a></li>
-        <li><a class="navigation-user__compare" href="compare.html">Сравнить</a></li>
-        <li><a class="navigation-user__cart" href="cart.html">Корзина</a></li>
-      </ul>
-    </section>
 
-    <section class="footer-condition">
-      <h2 class="visually-hidden">Услоивия покупки</h2>
-      <p>г.Москва, ул.Строителей, 15</p>
-      <ul class="navigation-site  navigation-site--footer">
-        <li><a href="index.html#delivery">Доставка</a></li> <!-- href="index.html#delivery" -->
-        <li><a href="index.html#warranty">Гарантия</a></li> <!-- href="index.html#warranty" -->
-        <li><a href="index.html#contacts">Контакты</a></li> <!-- href="index.html#contacts" -->
-      </ul>
-      <p class="contacts-tel">
-        <a href="tel:+74954959595">Тел.: +7(495)495-95-95</a>
-      </p>
-    </section>
+    <div class="container">
+      <section class="footer-user">
+        <h2 class="visually-hidden">Для пользователя</h2>
+        <a class="logo  logo--footer">
+          <!-- на других страницах будет ссылкой на главную -->
+          <img src="img/footer_logo.png"  width="163" height="36" alt="Логотип магазина «DEVICE»">
+        </a>
+        <ul class="navigation-user  navigation-user--footer">
+          <li class="inactive"><a class="login-link" href="#">Войти</a></li>
+          <li><a class="login-user" href="#">Валентин Петухов</a></li>
+          <li class="active"><a class="logout-link  " href="#">Выйти</a></li>
+          <li><a class="navigation-user__compare" href="compare.html">Сравнить</a></li>
+          <li><a class="navigation-user__cart" href="cart.html">Корзина</a></li>
+        </ul>
+      </section>
 
-    <section class="footer-social">
-      <h2 class="visually-hidden">Мы в соцсетях</h2>
-      <ul class="social-links">
-        <li class="social-button  social-button--fb"><a href="fb.com">Мы в фйесбуке</a></li>
-        <li class="social-button  social-button--istagram"><a href="istagram.com">Мы в инстаграмме</a></li>
-        <li class="social-button  social-button--twitter"><a href="twitter.com">Мы в твиттере</a></li>
-      </ul>
-      <p class="copyright">
-        <a href="https://aaltn.github.io/">aaltn.github.io</a>
-      </p>
-    </section>
+      <section class="footer-condition">
+        <h2 class="visually-hidden">Услоивия покупки</h2>
+        <p>г. Москва, ул. Строителей, 15</p>
+        <ul class="navigation-site  navigation-site--footer">
+          <li><a href="index.html#delivery">Доставка</a></li> <!-- href="index.html#delivery" -->
+          <li><a href="index.html#warranty">Гарантия</a></li> <!-- href="index.html#warranty" -->
+          <li><a href="index.html#contacts">Контакты</a></li> <!-- href="index.html#contacts" -->
+        </ul>
+        <p class="contacts-tel">
+          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        </p>
+      </section>
+
+      <section class="footer-social">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="social-links">
+          <li class="social-button  social-button--fb"><a href="fb.com">Мы в фйесбуке</a></li>
+          <li class="social-button  social-button--istagram"><a href="istagram.com">Мы в инстаграмме</a></li>
+          <li class="social-button  social-button--twitter"><a href="twitter.com">Мы в твиттере</a></li>
+        </ul>
+        <p class="copyright">
+          <a href="https://aaltn.github.io/">aaltn.github.io</a>
+        </p>
+      </section>
+    </div>
+
   </footer>
 
   <div class="modal-overlay"></div>

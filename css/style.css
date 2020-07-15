@@ -446,8 +446,15 @@ a {
 .inner-page .logo:active,
 .navigation-user a:active,
 .navigation-site a:active,
-.active {
+.navigation-user .active {
   opacity: 0.3;
+}
+
+.navigation-site .active {
+  background: linear-gradient(#ffffff, #ffffff);
+  background-repeat: no-repeat;
+  background-size: auto 7px;
+  background-position: 0 20px;
 }
 
 .inactive {
@@ -1426,11 +1433,13 @@ a {
 }
 
 .modal-image-zoom {
-  /* display: none; */
-
-  width: 960px;
-  height: 560px;
-  margin-left: -480px;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  width: 1100px;
+  height: 700px;
+  margin-left: -550px;
 }
 
 .modal-show {
