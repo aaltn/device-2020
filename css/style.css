@@ -236,19 +236,28 @@ a {
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-self: center;
   width: 500px;
+}
+
+.navigation-user li:nth-child(1) {
+  margin-right: auto;
 }
 
 .navigation-user li {
   vertical-align: middle;
 }
 
-.navigation-user a {
+.navigation-user li:nth-child(4) {
+  margin-right: 40px;
+}
 
+.navigation-user a {
   /* display: inline-block; */
   /* width: 100px; */
-  /* margin-right: 20px; */
+  padding-left: 25px;
 }
 
 .navigation-user .login-user {
@@ -265,6 +274,27 @@ a {
   text-align: right;
 }
 
+.login-link,
+.navigation-user__compare,
+.navigation-user__cart {
+  /* background-image: url(); */
+  background-repeat: no-repeat;
+  background-position: 0 4px;
+}
+
+.login-link {
+  background-image: url("../img/svg/user.svg");
+}
+
+.navigation-user__compare {
+  background-image: url("../img/svg/compare.svg");
+  background-position: 4px 6px;
+}
+
+.navigation-user__cart {
+  background-image: url("../img/svg/cart.svg");
+}
+
 .navigation-site,
 .accent-link  {
   font-family: 'Gilroy Extra Bold', Arial, sans-serif;;
@@ -277,6 +307,7 @@ a {
 
 .navigation-site {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -749,7 +780,7 @@ a {
 }
 
 .services__list {
-  padding-right: 320px;
+  /* padding-right: 320px; */
 }
 
 .services .accent-link {
@@ -764,10 +795,27 @@ a {
 
 .services__item {
   /* display: none; */
+  padding-right: 320px;
+
+  /* background-image: url(); */
+  background-repeat: no-repeat;
+  background-position: right 65px top 85px;
 }
 
 .services__item--active {
   /* display: block; */
+}
+
+.services__item--delivery {
+  background-image: url("../img/svg/delivery.svg");
+}
+
+.services__item--warranty {
+  background-image: url("../img/svg/warranty.svg");
+}
+
+.services__item--credit {
+  background-image: url("../img/svg/credit.svg");
 }
 
 
@@ -907,6 +955,27 @@ a {
   color: #ffffff;
 }
 
+.navigation-user--footer {
+  align-self: auto;
+}
+
+.navigation-user--footer li:nth-child(1) {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.navigation-user--footer .login-link {
+  background-image: url("../img/svg/user-yellow.svg");
+}
+
+.navigation-user--footer .navigation-user__compare {
+  background-image: url("../img/svg/compare-yellow.svg");
+}
+
+.navigation-user--footer .navigation-user__cart {
+  background-image: url("../img/svg/cart-yellow.svg");
+}
+
 .navigation-user--footer a {
   opacity: 0.7;
 }
@@ -924,15 +993,17 @@ a {
   justify-content: space-between;
 }
 
-.footer-condition,
-.footer-social {
+.footer-condition {
   align-items: baseline;
 }
 
-.footer-condition {
-  margin-bottom: 24px;
+.footer-social {
+  align-items: center;
 }
 
+.footer-condition {
+  margin-bottom: 46px;
+}
 
 .footer-social::before {
   content: "";
@@ -944,7 +1015,6 @@ a {
 
   background-color: #ffc600;
 }
-
 
 .social-links {
   display: flex;
@@ -977,6 +1047,11 @@ a {
   display: inline-block;
   width: 32px;
   height: 32px;
+
+  font-size: 0;
+  opacity: 0.3;
+
+  background-repeat: no-repeat;
 }
 
 .social-button--fb a {
@@ -991,12 +1066,6 @@ a {
   background-image: url("../img/svg/twitter.svg");
 }
 
-.social-button a {
-  font-size: 0;
-
-  opacity: 0.3;
-}
-
 .social-button a:hover,
 .social-button a:focus {
   opacity: 0.6;
@@ -1007,7 +1076,9 @@ a {
 }
 
 .copyright {
-  width: 280px;
+  min-width: 280px;
+  margin: 0;
+
   text-align: right;
 }
 
@@ -1252,7 +1323,7 @@ a {
 
 .modal-write-us p {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .modal-columns > p {
@@ -1261,7 +1332,7 @@ a {
 
 .button--modal-close {
   position: absolute;
-  top: 22px;
+  top: 20px;
   right: 22px;
   z-index: 2;
 
@@ -1279,13 +1350,19 @@ a {
 }
 
 .modal-textarea {
+  box-sizing: border-box;
   width: 100%;
-  min-height: 150px;
+  min-height: 160px;
+  padding: 15px 15px;
 
   background-color: #f2f2f2;
   border: 3px transparent solid;
 
   resize: none;
+}
+
+.modal .accent-link {
+  width: 200px;
 }
 
 .button--modal-close:hover,
@@ -1336,7 +1413,8 @@ a {
 
   width: 760px;
   margin-left: -480px;
-  padding: 80px 100px;
+  padding: 88px 100px;
+  padding-bottom: 78px;
 }
 
 .modal-map {
