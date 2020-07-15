@@ -34,7 +34,8 @@ window.addEventListener('load', function() {
 
 //login form  ---------------------------------------------------------------------------
 var body = document.body;
-var link = document.querySelector(".login-link");
+// var link = document.querySelector(".login-link");
+var link = document.getElementsByClassName("login-link");
 
 var popup = document.querySelector(".modal-login");
 var close = popup.querySelector(".button--modal-close");
@@ -53,19 +54,21 @@ try {
   isStorageSupport = false;
 }
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-  overlayPopup.classList.add("overlay-show");
-  body.classList.add("body-overlayed");
+for (i = 0; i < link.length; i++) {
+  link[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+    overlayPopup.classList.add("overlay-show");
+    body.classList.add("body-overlayed");
 
-  if (storage) {
-    login.value = storage;
-    password.focus();
-  } else {
-    login.focus();
-  }
-});
+    if (storage) {
+      login.value = storage;
+      password.focus();
+    } else {
+      login.focus();
+    }
+  });
+}
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
